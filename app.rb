@@ -20,4 +20,16 @@ end
 get '/models/:id' do
   #for instance if a user types www.website.com models/2 then
   #it will get the id number 2 from paramas
+  #it will then find the instance of the model with that id number
+  #and set it equal to an instance variable
+  @model =Model.find(params[:id])
+  erb :show
+end
+
+get '/models/:id/edit' do
+  erb :edit
+end
+
+# the edit.erb view page will contain the form for editing
+#a given instance of a model
 end
