@@ -31,5 +31,12 @@ get '/models/:id/edit' do
 end
 
 # the edit.erb view page will contain the form for editing
-#a given instance of a model
+#a given instance of a model to update using the id from params
+#it updates and saves the instance
+
+#Also we need to update config.ru to use the sinatra middleware that lets
+#our app send patch requests by:
+#use Rack::MethodOverride
+#run ApplicationController
+
 end
