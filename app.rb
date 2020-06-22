@@ -39,4 +39,21 @@ end
 #use Rack::MethodOverride
 #run ApplicationController
 
+#<form action="/models/<%= @model.id %>" method="post">
+    #<input id="hidden" type="hidden" name="_method" value="patch">
+    #<input type="text" ...>
+#</form
+
+#the method override mdidleware will
+#intercept ever request send and received by the app#if it finds a request
+#with the name="_method" then it will set the request type
+#based on what is set in the value attribute which in this case is patch
+
+#delete is implemented via a delete button which is actually a form
+#form should send delete request to delete '/models/:id' and should only
+#contain a submit button with a value of delete like this:
+#<form method="post" action="/models/<%= @model.id %>">
+  #<input id="hidden" type="hidden" name="_method" value="DELETE">
+  #<input type="submit" value="delete">
+#</form>
 end
