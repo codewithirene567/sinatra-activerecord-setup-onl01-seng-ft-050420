@@ -16,4 +16,8 @@ get 'models' do
   @models = Model.all
   erb :index
 end
+
+get '/models/:id' do
+  #for instance if a user types www.website.com models/2 then
+  #it will get the id number 2 from paramas
 end
