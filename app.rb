@@ -6,4 +6,6 @@ get '/models/new' do
   erb :new
 end
 
+post '/models' do
+end
 end
